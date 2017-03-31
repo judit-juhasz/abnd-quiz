@@ -1,9 +1,9 @@
 package com.example.android.flashcards;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Toast;
 
 public class ConfigActivity extends AppCompatActivity {
 
@@ -14,6 +14,8 @@ public class ConfigActivity extends AppCompatActivity {
     }
 
     public void startQuizOnClick(View view) {
-        Toast.makeText(this, "The button is working!", Toast.LENGTH_SHORT).show();
+        final Intent quizIntent = new Intent(this, QuizActivity.class);
+        quizIntent.putExtra(QuizActivity.EXTRA_NAME, "Jane Doe");
+        startActivity(quizIntent);
     }
 }
