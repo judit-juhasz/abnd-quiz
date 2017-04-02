@@ -27,7 +27,7 @@ public class ConfigActivity extends AppCompatActivity {
         mShuffleRadioButton = (RadioButton) findViewById(R.id.rb_shuffle_true);
     }
 
-    public void startQuizOnClick(View view) {
+    public void onClickStartQuiz(View view) {
         final Intent quizIntent = new Intent(this, QuizActivity.class);
 
         quizIntent.putExtra(QuizActivity.EXTRA_NAME, "Jane Doe");
