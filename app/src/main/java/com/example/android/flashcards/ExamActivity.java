@@ -102,7 +102,7 @@ public class ExamActivity extends AppCompatActivity {
         if (correctAnswerForQuestion10.isChecked()) {
             mScore++;
         }
-        Toast.makeText(this, "score " + mScore, Toast.LENGTH_LONG).show();
 
+        Toast.makeText(this, "score " + mScore, Toast.LENGTH_LONG).show();
     }
 }
