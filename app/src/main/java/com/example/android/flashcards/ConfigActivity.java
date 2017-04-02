@@ -19,7 +19,7 @@ public class ConfigActivity extends AppCompatActivity {
     public static final String EXTRA_NAME = "extra-name-parameter";
 
     private EditText mNameEditText;
-    private CheckBox mCategoryACheckBox;
+    private CheckBox mCategoryEventsCheckBox;
     private CheckBox mCategoryBCheckBox;
     private CheckBox mCategoryCCheckBox;
     private CheckBox mCategoryDCheckBox;
@@ -38,7 +38,7 @@ public class ConfigActivity extends AppCompatActivity {
             mNameEditText.setText(intent.getStringExtra(EXTRA_NAME));
         }
 
-        mCategoryACheckBox = (CheckBox) findViewById(R.id.cb_category_a);
+        mCategoryEventsCheckBox = (CheckBox) findViewById(R.id.cb_category_events);
         mCategoryBCheckBox = (CheckBox) findViewById(R.id.cb_category_b);
         mCategoryCCheckBox = (CheckBox) findViewById(R.id.cb_category_c);
         mCategoryDCheckBox = (CheckBox) findViewById(R.id.cb_category_d);
@@ -70,8 +70,8 @@ public class ConfigActivity extends AppCompatActivity {
     private ArrayList<Question> getQuestionsForSelectedCategories() {
         final ArrayList<Question> questions = new ArrayList<>();
 
-        if (mCategoryACheckBox.isChecked()) {
-            questions.addAll(QuestionUtils.getCategoryAQuestions());
+        if (mCategoryEventsCheckBox.isChecked()) {
+            questions.addAll(QuestionUtils.getEventQuestions());
         }
 
         return questions;
@@ -99,7 +99,7 @@ public class ConfigActivity extends AppCompatActivity {
     }
 
     public boolean isOneOrMoreCategorySelected() {
-        return mCategoryACheckBox.isChecked() || mCategoryBCheckBox.isChecked() ||
+        return mCategoryEventsCheckBox.isChecked() || mCategoryBCheckBox.isChecked() ||
                 mCategoryCCheckBox.isChecked() || mCategoryDCheckBox.isChecked() ||
                 mCategoryECheckBox.isChecked() || mCategoryFCheckBox.isChecked();
     }
