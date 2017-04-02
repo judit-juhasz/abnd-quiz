@@ -1,3 +1,60 @@
 <resources>
     <string name="app_name">Flashcards</string>
+
+    <string name="exam_information">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</string>
+
+    <string name="question_1">The ancient city of Rome was built on this many hills:</string>
+    <string name="answer_1">7</string>
+
+    <string name="question_2">Who is the God of war?</string>
+    <string name="answer_2_a">Jupiter</string>
+    <string name="answer_2_b">Mars</string>
+    <string name="answer_2_c">Zeus</string>
+
+    <string name="question_3">Who was the last king of Rome?</string>
+    <string name="answer_3_a">Augustus</string>
+    <string name="answer_3_b">Julius Caesar</string>
+    <string name="answer_3_c">Tarquinius Superbus</string>
+
+
+    <string name="question_4">In what year did the Western Roman Empire come to an end?</string>
+    <string name="answer_4_a">395 CE</string>
+    <string name="answer_4_b">476 CE</string>
+    <string name="answer_4_c">27 BCE</string>
+
+
+    <string name="question_5">Where did Julius Caesar defeat Pompey?</string>
+    <string name="answer_5_a">Zama</string>
+    <string name="answer_5_b">Pydna</string>
+    <string name="answer_5_c">Pharsalus</string>
+
+    <string name="question_6">Who made up the First Triumvirate?</string>
+    <string name="answer_6_a">Julius Caesar</string>
+    <string name="answer_6_b">Pompeius Magnus</string>
+    <string name="answer_6_c">Augustus</string>
+    <string name="answer_6_d">Marius</string>
+    <string name="answer_6_e">Marcus Crassus</string>
+
+    <string name="question_7">In ancient Roman cities, what was the marketplace and meeting area called?</string>
+    <string name="answer_7_a">toga</string>
+    <string name="answer_7_b">limes</string>
+    <string name="answer_7_c">forum</string>
+
+    <string name="question_8">When did Julius Caesar die?</string>
+    <string name="answer_8_a">31 BCE</string>
+    <string name="answer_8_b">27 BCE</string>
+    <string name="answer_8_c">44 BCE</string>
+
+    <string name="question_9">Who are the Gods of Roman Empire?</string>
+    <string name="answer_9_a">Neptunus</string>
+    <string name="answer_9_b">Cicero</string>
+    <string name="answer_9_c">Poseidon</string>
+    <string name="answer_9_d">Vesta</string>
+
+    <string name="question_10">Who was a legendary founder of Rome?</string>
+    <string name="answer_10_a">Vergilius</string>
+    <string name="answer_10_b">Nero</string>
+    <string name="answer_10_c">Romulus</string>
+
+    <string name="submit_button">Submit</string>
 </resources>

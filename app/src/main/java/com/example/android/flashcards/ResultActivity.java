@@ -36,7 +36,6 @@ public class ResultActivity extends AppCompatActivity {
         final int resultPercentage = (int) ((numberOfCorrectAnswers * 100.0) / numberOfQuestions);
         final TextView resultTextView = (TextView) findViewById(R.id.tv_result);
         resultTextView.setText("Your result is " + resultPercentage + "% which is not that bad!");
-
     }
 
     public void onClickNewQuiz(View view) {
