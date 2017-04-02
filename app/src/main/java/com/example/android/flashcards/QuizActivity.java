@@ -93,6 +93,7 @@ public class QuizActivity extends AppCompatActivity {
             hideAnswerButton();
             showAnswerFeedback();
         }
+        mState = state;
     }
 
     private void hideAnswerButton() {
