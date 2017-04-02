@@ -13,6 +13,7 @@ public class ResultActivity extends AppCompatActivity {
     public static final String EXTRA_NUMBER_OF_CORRECT_ANSWERS =
             "extra-number-of-correct-answers-parameter";
 
+    private String mName;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,8 +24,8 @@ public class ResultActivity extends AppCompatActivity {
 
         final TextView congratulationsTextView = (TextView) findViewById(R.id.tv_congratulations);
         if (intent.hasExtra(EXTRA_NAME)) {
-            congratulationsTextView.setText("Congratulations, " + intent.getStringExtra(EXTRA_NAME)
-                    + "!");
+            mName = intent.getStringExtra(EXTRA_NAME);
+            congratulationsTextView.setText("Congratulations, " + mName + "!");
         } else {
             congratulationsTextView.setText("Congratulations!");
         }
@@ -40,6 +41,9 @@ public class ResultActivity extends AppCompatActivity {
 
     public void onClickNewQuiz(View view) {
         final Intent intent = new Intent(this, ConfigActivity.class);
+        if (!mName.isEmpty()) {
+            intent.putExtra(ConfigActivity.EXTRA_NAME, mName);
+        }
         startActivity(intent);
     }
 

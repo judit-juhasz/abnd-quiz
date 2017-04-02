@@ -5,7 +5,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.CheckBox;
+import android.widget.EditText;
 import android.widget.RadioButton;
+import android.widget.TextView;
 
 import com.example.android.flashcards.utilities.QuestionUtils;
 
@@ -14,6 +16,9 @@ import java.util.Collections;
 
 public class ConfigActivity extends AppCompatActivity {
 
+    public static final String EXTRA_NAME = "extra-name-parameter";
+
+    private EditText mNameEditText;
     private CheckBox mCategoryACheckBox;
     private RadioButton mShuffleRadioButton;
 
@@ -21,6 +26,12 @@ public class ConfigActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_config);
+
+        final Intent intent = getIntent();
+        mNameEditText = (EditText) findViewById(R.id.et_name);
+        if (intent.hasExtra(EXTRA_NAME)) {
+            mNameEditText.setText(intent.getStringExtra(EXTRA_NAME));
+        }
 
         mCategoryACheckBox = (CheckBox) findViewById(R.id.cb_category_a);
 
