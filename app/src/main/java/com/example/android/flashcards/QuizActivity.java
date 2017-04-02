@@ -29,6 +29,7 @@ public class QuizActivity extends AppCompatActivity {
     private String mName;
     private ArrayList<Question> mQuestions;
     private int mCurrentQuestionIndex;
+    private int mNumberOfCorrectAnswers;
 
 
     @Override
@@ -50,6 +51,7 @@ public class QuizActivity extends AppCompatActivity {
         if (intent.hasExtra(EXTRA_QUESTIONS)) {
             mQuestions = intent.getParcelableArrayListExtra(EXTRA_QUESTIONS);
             final int firstQuestionIndex = 0;
+            mNumberOfCorrectAnswers = 0;
             loadQuestion(firstQuestionIndex);
         } else {
             // Error
@@ -112,6 +114,9 @@ public class QuizActivity extends AppCompatActivity {
     }
 
     public void onClickAnswerFeedback(View view) {
+        final Button button = (Button) view;
+        if (R.id.b_yes == button.getId()) ++mNumberOfCorrectAnswers;
+
         final boolean isNextQuestion = loadNextQuestion();
         if (isNextQuestion) {
             switchToState(STATE_QUESTION);
