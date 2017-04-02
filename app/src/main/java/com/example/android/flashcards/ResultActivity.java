@@ -3,6 +3,7 @@ package com.example.android.flashcards;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.TextView;
 
 public class ResultActivity extends AppCompatActivity {
@@ -35,5 +36,15 @@ public class ResultActivity extends AppCompatActivity {
         final TextView resultTextView = (TextView) findViewById(R.id.tv_result);
         resultTextView.setText("Your result is " + resultPercentage + "% which is not that bad!");
 
+    }
+
+    public void onClickNewQuiz(View view) {
+        final Intent intent = new Intent(this, ConfigActivity.class);
+        startActivity(intent);
+    }
+
+    public void onClickTakeExam(View view) {
+        final Intent intent = new Intent(this, ExamActivity.class);
+        startActivity(intent);
     }
 }
