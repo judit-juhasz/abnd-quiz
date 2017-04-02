@@ -23,7 +23,13 @@ public class QuizActivity extends AppCompatActivity {
     private TextView mCheckQuestionTextView;
     private Button mYesButton;
     private Button mNoButton;
+    private TextView mQuestionTextView;
     private TextView mAnswerTextView;
+
+    private String mName;
+    private ArrayList<Question> mQuestions;
+    private int mCurrentQuestionIndex;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,20 +40,29 @@ public class QuizActivity extends AppCompatActivity {
         mCheckQuestionTextView = (TextView) findViewById(R.id.tv_check_question);
         mYesButton = (Button) findViewById(R.id.b_yes);
         mNoButton = (Button) findViewById(R.id.b_no);
+        mQuestionTextView = (TextView) findViewById(R.id.tv_question);
         mAnswerTextView = (TextView) findViewById(R.id.tv_answer);
 
         final Intent intent = getIntent();
         if (intent.hasExtra(EXTRA_NAME)) {
-            final String name = intent.getStringExtra(EXTRA_NAME);
+            mName = intent.getStringExtra(EXTRA_NAME);
         }
         if (intent.hasExtra(EXTRA_QUESTIONS)) {
-            final ArrayList<Question> questions =
-                    intent.getParcelableArrayListExtra(EXTRA_QUESTIONS);
+            mQuestions = intent.getParcelableArrayListExtra(EXTRA_QUESTIONS);
+            final int firstQuestionIndex = 0;
+            loadQuestion(firstQuestionIndex);
         } else {
             // Error
         }
 
         switchToState(STATE_QUESTION);
+    }
+
+    private void loadQuestion(int index) {
+        final Question question = mQuestions.get(index);
+        mQuestionTextView.setText(question.getQuestion());
+        mAnswerTextView.setText(question.getAnswer());
+        mCurrentQuestionIndex = index;
     }
 
     private void switchToState(final int state) {
