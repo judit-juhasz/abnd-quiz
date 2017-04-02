@@ -122,6 +122,15 @@ public class QuizActivity extends AppCompatActivity {
             switchToState(STATE_QUESTION);
         } else {
             final Intent resultActivityIntent = new Intent(this, ResultActivity.class);
+            resultActivityIntent.putExtra(ResultActivity.EXTRA_NAME, mName);
+            resultActivityIntent.putExtra(
+                    ResultActivity.EXTRA_NUMBER_OF_QUESTIONS,
+                    mQuestions.size()
+            );
+            resultActivityIntent.putExtra(
+                    ResultActivity.EXTRA_NUMBER_OF_CORRECT_ANSWERS,
+                    mNumberOfCorrectAnswers
+            );
             startActivity(resultActivityIntent);
         }
     }
