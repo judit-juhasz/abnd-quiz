@@ -3,48 +3,55 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:padding="16dp"
     tools:context="com.example.android.flashcards.QuizActivity">
 
-    <Button
-        android:id="@+id/b_show_answer"
-        android:layout_width="wrap_content"
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Show answer"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        android:visibility="visible"/>
+        android:id="@+id/control_panel">
 
-    <TextView
-        android:id="@+id/tv_check_question"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Did you know the answer?"
-        app:layout_constraintTop_toBottomOf="@id/b_show_answer"
-        app:layout_constraintLeft_toLeftOf="@id/b_show_answer"
-        android:visibility="visible"/>
+        <Button
+            android:id="@+id/b_show_answer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Show answer"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:onClick="onClickShowAnswer" />
 
-    <Button
-        android:id="@+id/b_yes"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Yes"
-        app:layout_constraintTop_toBottomOf="@id/tv_check_question"
-        app:layout_constraintRight_toLeftOf="@+id/b_no"
-        app:layout_constraintLeft_toLeftOf="parent"
-        android:visibility="visible"/>
+        <TextView
+            android:id="@+id/tv_check_question"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Did you know the answer?"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
 
-    <Button
-        android:id="@id/b_no"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="No"
-        app:layout_constraintTop_toBottomOf="@id/tv_check_question"
-        app:layout_constraintLeft_toRightOf="@id/b_yes"
-        app:layout_constraintRight_toRightOf="parent"
-        android:visibility="visible"/>
+        <Button
+            android:id="@+id/b_yes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Yes"
+            app:layout_constraintTop_toBottomOf="@id/tv_check_question"
+            app:layout_constraintRight_toLeftOf="@+id/b_no"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:onClick="onClickAnswerFeedback" />
+
+        <Button
+            android:id="@id/b_no"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No"
+            app:layout_constraintTop_toBottomOf="@id/tv_check_question"
+            app:layout_constraintLeft_toRightOf="@id/b_yes"
+            app:layout_constraintRight_toRightOf="parent"
+            android:onClick="onClickAnswerFeedback" />
+
+    </android.support.constraint.ConstraintLayout>
 
     <TextView
         android:id="@+id/tv_question"
@@ -53,7 +60,7 @@
         android:text="Here is the question."
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/b_yes"/>
+        app:layout_constraintTop_toBottomOf="@id/control_panel"/>
 
     <View
         android:id="@+id/v_separator_line"
