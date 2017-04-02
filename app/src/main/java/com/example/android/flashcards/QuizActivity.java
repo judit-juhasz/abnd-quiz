@@ -20,8 +20,6 @@ public class QuizActivity extends AppCompatActivity {
         final Intent intent = getIntent();
         if (intent.hasExtra(EXTRA_NAME)) {
             final String name = intent.getStringExtra(EXTRA_NAME);
-            final TextView nameTextView = (TextView) findViewById(R.id.tv_name);
-            nameTextView.setText(name);
         }
         if (intent.hasExtra(EXTRA_QUESTIONS)) {
             final ArrayList<Question> questions =
