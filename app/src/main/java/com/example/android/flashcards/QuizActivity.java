@@ -37,27 +37,35 @@ public class QuizActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quiz);
 
-        mShowAnswerButton = (Button) findViewById(R.id.b_show_answer);
-        mCheckQuestionTextView = (TextView) findViewById(R.id.tv_check_question);
-        mYesButton = (Button) findViewById(R.id.b_yes);
-        mNoButton = (Button) findViewById(R.id.b_no);
-        mQuestionTextView = (TextView) findViewById(R.id.tv_question);
-        mAnswerTextView = (TextView) findViewById(R.id.tv_answer);
+        queryViews();
+        extractIntentData();
 
+        final int firstQuestionIndex = 0;
+        mNumberOfCorrectAnswers = 0;
+        loadQuestion(firstQuestionIndex);
+
+        switchToState(STATE_QUESTION);
+    }
+
+    private void extractIntentData() {
         final Intent intent = getIntent();
         if (intent.hasExtra(EXTRA_NAME)) {
             mName = intent.getStringExtra(EXTRA_NAME);
         }
         if (intent.hasExtra(EXTRA_QUESTIONS)) {
             mQuestions = intent.getParcelableArrayListExtra(EXTRA_QUESTIONS);
-            final int firstQuestionIndex = 0;
-            mNumberOfCorrectAnswers = 0;
-            loadQuestion(firstQuestionIndex);
         } else {
             // Error
         }
+    }
 
-        switchToState(STATE_QUESTION);
+    private void queryViews() {
+        mShowAnswerButton = (Button) findViewById(R.id.b_show_answer);
+        mCheckQuestionTextView = (TextView) findViewById(R.id.tv_check_question);
+        mYesButton = (Button) findViewById(R.id.b_yes);
+        mNoButton = (Button) findViewById(R.id.b_no);
+        mQuestionTextView = (TextView) findViewById(R.id.tv_question);
+        mAnswerTextView = (TextView) findViewById(R.id.tv_answer);
     }
 
     private void loadQuestion(int index) {
@@ -121,17 +129,21 @@ public class QuizActivity extends AppCompatActivity {
         if (isNextQuestion) {
             switchToState(STATE_QUESTION);
         } else {
-            final Intent resultActivityIntent = new Intent(this, ResultActivity.class);
-            resultActivityIntent.putExtra(ResultActivity.EXTRA_NAME, mName);
-            resultActivityIntent.putExtra(
-                    ResultActivity.EXTRA_NUMBER_OF_QUESTIONS,
-                    mQuestions.size()
-            );
-            resultActivityIntent.putExtra(
-                    ResultActivity.EXTRA_NUMBER_OF_CORRECT_ANSWERS,
-                    mNumberOfCorrectAnswers
-            );
-            startActivity(resultActivityIntent);
+            showResult();
         }
+    }
+
+    private void showResult() {
+        final Intent resultActivityIntent = new Intent(this, ResultActivity.class);
+        resultActivityIntent.putExtra(ResultActivity.EXTRA_NAME, mName);
+        resultActivityIntent.putExtra(
+                ResultActivity.EXTRA_NUMBER_OF_QUESTIONS,
+                mQuestions.size()
+        );
+        resultActivityIntent.putExtra(
+                ResultActivity.EXTRA_NUMBER_OF_CORRECT_ANSWERS,
+                mNumberOfCorrectAnswers
+        );
+        startActivity(resultActivityIntent);
     }
 }
