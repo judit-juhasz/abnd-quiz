@@ -65,6 +65,16 @@ public class QuizActivity extends AppCompatActivity {
         mCurrentQuestionIndex = index;
     }
 
+    private boolean loadNextQuestion() {
+        final int nextQuestionIndex = mCurrentQuestionIndex + 1;
+        if (mQuestions.size() > nextQuestionIndex) {
+            loadQuestion(nextQuestionIndex);
+            return true;
+        } else {
+            return false;
+        }
+    }
+
     private void switchToState(final int state) {
         if (STATE_QUESTION == state) {
             hideAnswerFeedback();
@@ -102,6 +112,12 @@ public class QuizActivity extends AppCompatActivity {
     }
 
     public void onClickAnswerFeedback(View view) {
-        switchToState(STATE_QUESTION);
+        final boolean isNextQuestion = loadNextQuestion();
+        if (isNextQuestion) {
+            switchToState(STATE_QUESTION);
+        } else {
+            final Intent resultActivityIntent = new Intent(this, ResultActivity.class);
+            startActivity(resultActivityIntent);
+        }
     }
 }
