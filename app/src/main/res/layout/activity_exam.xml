@@ -28,6 +28,7 @@
             android:layout_height="wrap_content"
             android:inputType="number"
             android:clickable="true"
+            android:maxLines="1"
             android:focusableInTouchMode="true"/>
 
         <TextView
