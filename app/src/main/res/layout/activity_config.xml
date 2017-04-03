@@ -1,139 +1,147 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:padding="16dp"
+    android:layout_height="wrap_content"
     tools:context="com.example.android.flashcards.ConfigActivity">
 
-    <TextView
-        android:id="@+id/tv_name_label"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/user_name"
-        android:textStyle="bold"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <android.support.constraint.ConstraintLayout
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
 
-    <EditText
-        android:id="@+id/et_name"
-        android:layout_width="336dp"
-        android:layout_height="wrap_content"
-        android:hint="@string/typing_name"
-        android:layout_marginTop="16dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_name_label" />
-
-    <TextView
-        android:id="@+id/tv_categories_label"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/category_title"
-        android:textStyle="bold"
-        android:layout_marginTop="16dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/et_name" />
-
-    <CheckBox
-        android:id="@+id/cb_category_events"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/category_a"
-        android:layout_marginTop="16dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_categories_label" />
-
-    <CheckBox
-        android:id="@+id/cb_category_persons"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/category_b"
-        app:layout_constraintTop_toTopOf="@id/cb_category_events"
-        app:layout_constraintLeft_toRightOf="@id/cb_category_events"
-        android:layout_marginLeft="25dp"
-        android:layout_marginStart="25dp" />
-
-    <CheckBox
-        android:id="@+id/cb_category_definitions"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/category_c"
-        android:layout_marginTop="16dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/cb_category_events" />
-
-    <CheckBox
-        android:id="@+id/cb_category_topography"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/category_d"
-        app:layout_constraintTop_toTopOf="@id/cb_category_definitions"
-        app:layout_constraintLeft_toLeftOf="@id/cb_category_persons" />
-
-    <CheckBox
-        android:id="@+id/cb_category_battles"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/category_e"
-        android:layout_marginTop="16dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/cb_category_definitions" />
-
-    <CheckBox
-        android:id="@+id/cb_category_culture"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/category_f"
-        app:layout_constraintTop_toTopOf="@id/cb_category_battles"
-        app:layout_constraintLeft_toLeftOf="@id/cb_category_topography" />
-
-    <TextView
-        android:id="@+id/tv_shuffle_cards_label"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/shuffle_cards"
-        android:textStyle="bold"
-        android:layout_marginTop="16dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/cb_category_battles" />
-
-    <RadioGroup
-        android:id="@+id/rg_shuffle_cards"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:checkedButton="@+id/rb_shuffle_false"
-        android:layout_marginTop="16dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_shuffle_cards_label" >
-
-        <RadioButton
-            android:id="@+id/rb_shuffle_true"
+        <TextView
+            android:id="@+id/tv_name_label"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/yes_button"
+            android:text="@string/user_name"
+            android:textStyle="bold"
             app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/rg_shuffle_cards" />
+            app:layout_constraintTop_toTopOf="parent" />
 
-        <RadioButton
-            android:id="@id/rb_shuffle_false"
+        <EditText
+            android:id="@+id/et_name"
+            android:layout_width="336dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/typing_name"
+            android:layout_marginTop="16dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_name_label" />
+
+        <TextView
+            android:id="@+id/tv_categories_label"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/no_button"
-            app:layout_constraintLeft_toLeftOf="@id/rb_shuffle_true"
-            app:layout_constraintTop_toBottomOf="@id/rg_shuffle_cards" />
+            android:text="@string/category_title"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/et_name" />
 
-    </RadioGroup>
+        <CheckBox
+            android:id="@+id/cb_category_events"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/category_a"
+            android:layout_marginTop="16dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_categories_label" />
 
-    <Button
-        android:id="@+id/b_start_quiz"
-        android:text="@string/start_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:onClick="onClickStartQuiz"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/rg_shuffle_cards"/>
+        <CheckBox
+            android:id="@+id/cb_category_persons"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/category_b"
+            app:layout_constraintTop_toTopOf="@id/cb_category_events"
+            app:layout_constraintLeft_toRightOf="@id/cb_category_events"
+            android:layout_marginLeft="25dp"
+            android:layout_marginStart="25dp" />
 
-</android.support.constraint.ConstraintLayout>
+        <CheckBox
+            android:id="@+id/cb_category_definitions"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/category_c"
+            android:layout_marginTop="16dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cb_category_events" />
+
+        <CheckBox
+            android:id="@+id/cb_category_topography"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/category_d"
+            app:layout_constraintTop_toTopOf="@id/cb_category_definitions"
+            app:layout_constraintLeft_toLeftOf="@id/cb_category_persons" />
+
+        <CheckBox
+            android:id="@+id/cb_category_battles"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/category_e"
+            android:layout_marginTop="16dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cb_category_definitions" />
+
+        <CheckBox
+            android:id="@+id/cb_category_culture"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/category_f"
+            app:layout_constraintTop_toTopOf="@id/cb_category_battles"
+            app:layout_constraintLeft_toLeftOf="@id/cb_category_topography" />
+
+        <TextView
+            android:id="@+id/tv_shuffle_cards_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/shuffle_cards"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cb_category_battles" />
+
+        <RadioGroup
+            android:id="@+id/rg_shuffle_cards"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:checkedButton="@+id/rb_shuffle_false"
+            android:layout_marginTop="16dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_shuffle_cards_label" >
+
+            <RadioButton
+                android:id="@+id/rb_shuffle_true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/yes_button"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/rg_shuffle_cards" />
+
+            <RadioButton
+                android:id="@id/rb_shuffle_false"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/no_button"
+                app:layout_constraintLeft_toLeftOf="@id/rb_shuffle_true"
+                app:layout_constraintTop_toBottomOf="@id/rg_shuffle_cards" />
+
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/b_start_quiz"
+            android:text="@string/start_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:onClick="onClickStartQuiz"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/rg_shuffle_cards"/>
+
+    </android.support.constraint.ConstraintLayout>
+
+</ScrollView>
