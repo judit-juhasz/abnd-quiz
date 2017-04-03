@@ -1,8 +1,119 @@
 <resources>
     <string name="app_name">Flashcards</string>
 
-    <!-- Categories -->
+    <string name="theme_title">How much do you know the Roman Empire</string>
+    <string name="practice_button">Practice</string>
+    <string name="exam_button">Take exam</string>
+    <string name="user_name">Name</string>
+    <string name="typing_name">Please type your name</string>
+    <string name="category_title">Categories</string>
+    <string name="shuffle_cards">Shuffle cards</string>
+    <string name="yes_button">Yes</string>
+    <string name="no_button">No</string>
+    <string name="start_button">Start</string>
+    <string name="show_answer_button">Show answer</string>
+    <string name="check_answer_text">Did you know the answer?</string>
+    <string name="question">Here is the question</string>
+    <string name="answer">Here is the answer</string>
+    <string name="new_quiz">New Quiz</string>
 
+
+    <!-- Categories -->
+    <string name="category_a">Events</string>
+    <string name="category_b">Persons</string>
+    <string name="category_c">Definitions</string>
+    <string name="category_d">Topography</string>
+    <string name="category_e">Battles</string>
+    <string name="category_f">Culture</string>
+
+
+    <!-- Practice questions and answers -->
+    <string name="question_events_1">44 BCE</string>
+    <string name="answer_events_1">Julius Caesar\'s death</string>
+
+    <string name="question_events_2">476 CE</string>
+    <string name="answer_events_2">The Western Roman Empire came to an end</string>
+
+    <string name="question_events_3">753 BCE</string>
+    <string name="answer_events_3">The most familiar date given for the foundation of Rome</string>
+
+    <string name="question_events_4">27 BCE</string>
+    <string name="answer_events_4">The beginning of the Principate</string>
+
+    <string name="question_events_5">60 BCE</string>
+    <string name="answer_events_5">The First Triumvirate</string>
+
+    <string name="question_persons_1">Who was Romulus?</string>
+    <string name="answer_persons_1">He was the legendary founder and first king of Rome.</string>
+
+    <string name="question_persons_2">Who was Tarquinius Superbus?</string>
+    <string name="answer_persons_2">He was the legendary seventh and final king of Rome, reigning from 535 BC until the popular uprising in 509 that led to the establishment of the Roman Republic.</string>
+
+    <string name="question_persons_3">Who was Spartacus?</string>
+    <string name="answer_persons_3">He was a Thracian gladiator who, along with the Gauls Crixus, Gannicus, Castus, and Oenomaus, was one of the escaped slave leaders in the Third Servile War, a major slave uprising against the Roman Republic.</string>
+
+    <string name="question_persons_4">Who was Brutus?</string>
+    <string name="answer_persons_4">He was a politician of the late Roman Republic. After being adopted by his uncle he used the name Quintus Servilius Caepio Brutus, but eventually returned to using his original name. He took a leading role in the assassination of Julius Caesar.</string>
+
+    <string name="question_persons_5">Who was Augustus?</string>
+    <string name="answer_persons_5">He was the founder of the Roman Principate and considered the first Roman emperor, controlling the Roman Empire from 27 BCE until his death.</string>
+
+    <string name="question_definitions_1">Definition of augur</string>
+    <string name="answer_definitions_1">The augur was a priest and official in the classical Roman world. His main role was the practice of augury, interpreting the will of the gods by studying the flight of birds.</string>
+
+    <string name="question_definitions_2">Definition of Roman legion</string>
+    <string name="answer_definitions_2">It was the largest unit of the Roman army involving from 3000 men in early times to over 5200 men in imperial times, consisting of centuries as the basic units. </string>
+
+    <string name="question_definitions_3">Definition of limes</string>
+    <string name="answer_definitions_3">It was a border defence or delimiting system of Ancient Rome. It marked the boundaries and provinces of the Roman Empire.</string>
+
+    <string name="question_definitions_4">Definition of princeps</string>
+    <string name="answer_definitions_4">Princeps is a Latin word meaning "first in time or order; the first, foremost, chief, the most eminent, distinguished, or noble; the first man, first person."</string>
+
+    <string name="question_definitions_5">Definition of consul</string>
+    <string name="answer_definitions_5">It was the highest elected political office of the Roman Republic, and the consulship was considered the highest level of the cursus honorum (the sequential order of public offices through which aspiring politicians sought to ascend).</string>
+
+    <string name="question_topography_1">In which country is Aquincum?</string>
+    <string name="answer_topography_1">Hungary</string>
+
+    <string name="question_topography_2">In which country is Rome?</string>
+    <string name="answer_topography_2">Italy</string>
+
+    <string name="question_topography_3">In which country is Pydna?</string>
+    <string name="answer_topography_3">Greece</string>
+
+    <string name="question_topography_4">In which country is Capua?</string>
+    <string name="answer_topography_4">Italy</string>
+
+    <string name="question_topography_5">In which country is Carthage?</string>
+    <string name="answer_topography_5">Tunisia</string>
+
+    <string name="question_battles_1">The Battle of Zama</string>
+    <string name="answer_battles_1">The Battle of Zama, fought around October 19, 202 BC, marked the end of the Second Punic War.</string>
+
+    <string name="question_battles_2">The Battle of Actium</string>
+    <string name="answer_battles_2">Actium is chiefly famous as the name given to the nearby naval Battle of Actium, in which Octavian won a decisive victory over Mark Antony in 31 BC.</string>
+
+    <string name="question_battles_3">The Battle of Pydna</string>
+    <string name="answer_battles_3">he Battle of Pydna (168 BC), in which the Roman general Aemilius Paulus defeated King Perseus, ended the reign of the Antigonid dynasty over Macedon.</string>
+
+    <string name="question_battles_4">The Battle of Pharsalus</string>
+    <string name="answer_battles_4">The Battle of Pharsalus, where Julius Caesar defeated Pompey and changed the course of the Roman Republic forever, took place in 48 BC in the fields of the Pharsalian Plain.</string>
+
+    <string name="question_culture_1">Who is Jupiter?</string>
+    <string name="answer_culture_1">Jupiter is the god of sky and thunder and king of the gods in Ancient Roman religion and mythology.</string>
+
+    <string name="question_culture_2">Who was Cicero?</string>
+    <string name="answer_culture_2">He was a Roman philosopher, politician, lawyer, orator, political theorist, consul, and constitutionalist.</string>
+
+    <string name="question_culture_3">What is the toga?</string>
+    <string name="answer_culture_3">It was a roughly semicircular cloth, between 12 and 20 feet in length, draped over the shoulders and around the body.</string>
+
+    <string name="question_culture_4">On how many hills was built the ancient city of Rome?</string>
+    <string name="answer_culture_4">7</string>
+
+    <string name="question_culture_5">Who was Vergilius?</string>
+    <string name="answer_culture_5">He was an ancient Roman poet of the Augustan period. He wrote three of the most famous poems in Latin literature, the Eclogues (or Bucolics), the Georgics, and the epic Aeneid.</string>
 
     <!-- Exam questions and answers -->
     <string name="exam_information">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</string>

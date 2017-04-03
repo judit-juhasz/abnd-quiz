@@ -20,11 +20,11 @@ public class ConfigActivity extends AppCompatActivity {
 
     private EditText mNameEditText;
     private CheckBox mCategoryEventsCheckBox;
-    private CheckBox mCategoryBCheckBox;
-    private CheckBox mCategoryCCheckBox;
-    private CheckBox mCategoryDCheckBox;
-    private CheckBox mCategoryECheckBox;
-    private CheckBox mCategoryFCheckBox;
+    private CheckBox mCategoryPersonsCheckBox;
+    private CheckBox mCategoryDefinitionsCheckBox;
+    private CheckBox mCategoryTopographyCheckBox;
+    private CheckBox mCategoryBattlesCheckBox;
+    private CheckBox mCategoryCultureCheckBox;
     private RadioButton mShuffleRadioButton;
 
     @Override
@@ -39,11 +39,11 @@ public class ConfigActivity extends AppCompatActivity {
         }
 
         mCategoryEventsCheckBox = (CheckBox) findViewById(R.id.cb_category_events);
-        mCategoryBCheckBox = (CheckBox) findViewById(R.id.cb_category_b);
-        mCategoryCCheckBox = (CheckBox) findViewById(R.id.cb_category_c);
-        mCategoryDCheckBox = (CheckBox) findViewById(R.id.cb_category_d);
-        mCategoryECheckBox = (CheckBox) findViewById(R.id.cb_category_e);
-        mCategoryFCheckBox = (CheckBox) findViewById(R.id.cb_category_f);
+        mCategoryPersonsCheckBox = (CheckBox) findViewById(R.id.cb_category_persons);
+        mCategoryDefinitionsCheckBox = (CheckBox) findViewById(R.id.cb_category_definitions);
+        mCategoryTopographyCheckBox = (CheckBox) findViewById(R.id.cb_category_topography);
+        mCategoryBattlesCheckBox = (CheckBox) findViewById(R.id.cb_category_battles);
+        mCategoryCultureCheckBox = (CheckBox) findViewById(R.id.cb_category_culture);
 
         mShuffleRadioButton = (RadioButton) findViewById(R.id.rb_shuffle_true);
     }
@@ -71,7 +71,27 @@ public class ConfigActivity extends AppCompatActivity {
         final ArrayList<Question> questions = new ArrayList<>();
 
         if (mCategoryEventsCheckBox.isChecked()) {
-            questions.addAll(QuestionUtils.getEventQuestions());
+            questions.addAll(QuestionUtils.getEventsQuestions(this));
+        }
+
+        if (mCategoryPersonsCheckBox.isChecked()) {
+            questions.addAll(QuestionUtils.getPersonsQuestions(this));
+        }
+
+        if (mCategoryDefinitionsCheckBox.isChecked()) {
+            questions.addAll(QuestionUtils.getDefinitionsQuestions(this));
+        }
+
+        if (mCategoryTopographyCheckBox.isChecked()) {
+            questions.addAll(QuestionUtils.getTopographyQuestions(this));
+        }
+
+        if (mCategoryBattlesCheckBox.isChecked()) {
+            questions.addAll(QuestionUtils.getBattlesQuestions(this));
+        }
+
+        if (mCategoryCultureCheckBox.isChecked()) {
+            questions.addAll(QuestionUtils.getCultureQuestions(this));
         }
 
         return questions;
@@ -99,8 +119,8 @@ public class ConfigActivity extends AppCompatActivity {
     }
 
     public boolean isOneOrMoreCategorySelected() {
-        return mCategoryEventsCheckBox.isChecked() || mCategoryBCheckBox.isChecked() ||
-                mCategoryCCheckBox.isChecked() || mCategoryDCheckBox.isChecked() ||
-                mCategoryECheckBox.isChecked() || mCategoryFCheckBox.isChecked();
+        return mCategoryEventsCheckBox.isChecked() || mCategoryPersonsCheckBox.isChecked() ||
+                mCategoryDefinitionsCheckBox.isChecked() || mCategoryTopographyCheckBox.isChecked() ||
+                mCategoryBattlesCheckBox.isChecked() || mCategoryCultureCheckBox.isChecked();
     }
 }
