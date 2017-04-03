@@ -78,7 +78,7 @@ public class QuizActivity extends AppCompatActivity {
         if (intent.hasExtra(EXTRA_QUESTIONS)) {
             mQuestions = intent.getParcelableArrayListExtra(EXTRA_QUESTIONS);
         } else {
-            // Error
+            finish();
         }
     }
 
