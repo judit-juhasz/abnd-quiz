@@ -116,7 +116,11 @@
     <string name="answer_culture_5">He was an ancient Roman poet of the Augustan period. He wrote three of the most famous poems in Latin literature, the Eclogues (or Bucolics), the Georgics, and the epic Aeneid.</string>
 
     <!-- Exam questions and answers -->
-    <string name="exam_information">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</string>
+    <string name="exam_information">
+        Exam information: The exam contains 10 questions. Every correct answer gives you 1 point.
+        You need at least 5 points in order to pass this exam. There is no time limit. Please check
+        your answers before clicking on the submit button. Good luck!
+    </string>
 
     <string name="question_1">The ancient city of Rome was built on this many hills:</string>
     <string name="answer_1">7</string>
