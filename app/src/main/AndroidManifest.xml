@@ -10,13 +10,13 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".ConfigActivity"
-            android:label="Practice"/>
+            android:label="@string/practice_button"/>
         <activity android:name=".QuizActivity"
-            android:label="Practice"/>
+            android:label="@string/practice_button"/>
         <activity android:name=".ResultActivity"
-            android:label="Practice"/>
+            android:label="@string/practice_button"/>
         <activity android:name=".ExamActivity"
-            android:label="Exam"/>
+            android:label="@string/exam_button"/>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
