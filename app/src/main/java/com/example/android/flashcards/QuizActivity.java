@@ -1,6 +1,7 @@
 package com.example.android.flashcards;
 
 import android.content.Intent;
+import android.os.PersistableBundle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -10,12 +11,16 @@ import android.widget.TextView;
 import java.util.ArrayList;
 
 public class QuizActivity extends AppCompatActivity {
-
     public static final String EXTRA_NAME = "extra-name-parameter";
     public static final String EXTRA_QUESTIONS = "extra-questions-parameter";
 
     private static final int STATE_QUESTION = 0;
     private static final int STATE_CHECK_ANSWER = 1;
+
+    private static final String SAVE_STATE_KEY = "SAVE_STATE_KEY";
+    private static final String SAVE_CURRENT_QUESTION_INDEX_KEY = "SAVE_CURRENT_QUESTION_INDEX_KEY";
+    private static final String SAVE_NUMBER_OF_CORRECT_ANSWERS_KEY =
+            "SAVE_NUMBER_OF_CORRECT_ANSWERS_KEY";
 
     private int mState;
 
@@ -40,11 +45,29 @@ public class QuizActivity extends AppCompatActivity {
         queryViews();
         extractIntentData();
 
-        final int firstQuestionIndex = 0;
         mNumberOfCorrectAnswers = 0;
+        final int firstQuestionIndex = 0;
         loadQuestion(firstQuestionIndex);
 
         switchToState(STATE_QUESTION);
+    }
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        outState.putInt(SAVE_STATE_KEY, mState);
+        outState.putInt(SAVE_NUMBER_OF_CORRECT_ANSWERS_KEY, mNumberOfCorrectAnswers);
+        outState.putInt(SAVE_CURRENT_QUESTION_INDEX_KEY, mCurrentQuestionIndex);
+        super.onSaveInstanceState(outState);
+    }
+
+    @Override
+    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+        final int savedState = savedInstanceState.getInt(SAVE_STATE_KEY);
+        switchToState(savedState);
+        mNumberOfCorrectAnswers = savedInstanceState.getInt(SAVE_NUMBER_OF_CORRECT_ANSWERS_KEY);
+        final int savedQuestionIndex = savedInstanceState.getInt(SAVE_CURRENT_QUESTION_INDEX_KEY);
+        loadQuestion(savedQuestionIndex);
     }
 
     private void extractIntentData() {
