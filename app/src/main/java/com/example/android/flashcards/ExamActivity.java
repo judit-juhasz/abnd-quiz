@@ -103,6 +103,10 @@ public class ExamActivity extends AppCompatActivity {
             mScore++;
         }
 
-        Toast.makeText(this, "score " + mScore, Toast.LENGTH_LONG).show();
+        String result = "Good, but you need more practice to pass. Your score is " + mScore + ".";
+        if (mScore >= 5) {
+            result = "Congratulations! You passed this exam. Your score is " + mScore + ".";
+        }
+        Toast.makeText(this, result, Toast.LENGTH_LONG).show();
     }
 }
