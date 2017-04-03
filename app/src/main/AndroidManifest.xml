@@ -9,10 +9,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ConfigActivity" />
-        <activity android:name=".QuizActivity" />
-        <activity android:name=".ResultActivity" />
-        <activity android:name=".ExamActivity" />
+        <activity android:name=".ConfigActivity"
+            android:label="Practice"/>
+        <activity android:name=".QuizActivity"
+            android:label="Practice"/>
+        <activity android:name=".ResultActivity"
+            android:label="Practice"/>
+        <activity android:name=".ExamActivity"
+            android:label="Exam"/>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
