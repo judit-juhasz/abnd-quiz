@@ -8,34 +8,30 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:layout_margin="@dimen/layout_margin">
 
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/exam_information"
-            android:layout_marginBottom="20dp"/>
+            style="@style/ExamInformation"
+            android:text="@string/exam_information" />
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/question_1"
-            android:layout_marginBottom="5dp"/>
+            style="@style/ExamQuestion"
+            android:text="@string/question_1" />
 
         <EditText
             android:id="@+id/et_answer_1"
-            android:layout_width="300dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="number"
             android:clickable="true"
             android:maxLines="1"
-            android:focusableInTouchMode="true"/>
+            android:focusableInTouchMode="true" />
 
         <TextView
             android:id="@+id/tv_question_2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/question_2"/>
+            style="@style/ExamQuestion"
+            android:text="@string/question_2" />
 
         <RadioGroup
             android:layout_width="wrap_content"
@@ -63,9 +59,8 @@
 
         <TextView
             android:id="@+id/tv_question_3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/question_3"/>
+            style="@style/ExamQuestion"
+            android:text="@string/question_3" />
 
         <RadioGroup
             android:layout_width="wrap_content"
@@ -93,9 +88,8 @@
 
         <TextView
             android:id="@+id/tv_question_4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/question_4"/>
+            style="@style/ExamQuestion"
+            android:text="@string/question_4" />
 
         <RadioGroup
             android:layout_width="wrap_content"
@@ -123,9 +117,8 @@
 
         <TextView
             android:id="@+id/tv_question_5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/question_5"/>
+            style="@style/ExamQuestion"
+            android:text="@string/question_5" />
 
         <RadioGroup
             android:layout_width="wrap_content"
@@ -153,9 +146,8 @@
 
         <TextView
             android:id="@+id/tv_question_6"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/question_6"/>
+            style="@style/ExamQuestion"
+            android:text="@string/question_6" />
 
         <CheckBox
             android:id="@+id/cb_answer_6_a"
@@ -190,9 +182,9 @@
 
         <TextView
             android:id="@+id/tv_question_7"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/question_7"/>
+            style="@style/ExamQuestion"
+            android:text="@string/question_7"
+            android:layout_marginTop="@dimen/margin_normal"/>
 
         <RadioGroup
             android:layout_width="wrap_content"
@@ -220,9 +212,8 @@
 
         <TextView
             android:id="@+id/tv_question_8"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/question_8"/>
+            style="@style/ExamQuestion"
+            android:text="@string/question_8" />
 
         <RadioGroup
             android:layout_width="wrap_content"
@@ -250,9 +241,8 @@
 
         <TextView
             android:id="@+id/tv_question_9"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/question_9"/>
+            style="@style/ExamQuestion"
+            android:text="@string/question_9" />
 
         <CheckBox
             android:id="@+id/cb_answer_9_a"
@@ -280,9 +270,8 @@
 
         <TextView
             android:id="@+id/tv_question_10"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/question_10"/>
+            style="@style/ExamQuestion"
+            android:text="@string/question_10" />
 
         <RadioGroup
             android:layout_width="wrap_content"
@@ -310,10 +299,9 @@
 
         <Button
             android:id="@+id/b_submit_answers"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            style="@style/SubmitButton"
             android:text="@string/submit_button"
-            android:onClick="submitAnswer"/>
+            android:onClick="submitAnswer" />
 
     </LinearLayout>
 

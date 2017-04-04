@@ -1,7 +1,8 @@
 <resources>
     <string name="app_name">Flashcards</string>
 
-    <string name="theme_title">How much do you know the Roman Empire</string>
+    <string name="theme_title">Test Your Knowledge</string>
+    <string name="theme_subtitle">The Roman Empire</string>
     <string name="practice_button">Practice</string>
     <string name="exam_button">Take exam</string>
     <string name="user_name">Name</string>
@@ -16,6 +17,7 @@
     <string name="question">Here is the question</string>
     <string name="answer">Here is the answer</string>
     <string name="new_quiz">New Quiz</string>
+    <string name="exam">Exam</string>
 
 
     <!-- Categories -->
@@ -175,5 +177,5 @@
     <string name="answer_10_b">Nero</string>
     <string name="answer_10_c">Romulus</string>
 
-    <string name="submit_button">Submit</string>
+    <string name="submit_button">SUBMIT</string>
 </resources>

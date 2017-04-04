@@ -16,7 +16,7 @@
         <activity android:name=".ResultActivity"
             android:label="@string/practice_button"/>
         <activity android:name=".ExamActivity"
-            android:label="@string/exam_button"/>
+            android:label="@string/exam"/>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
