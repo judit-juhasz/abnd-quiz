@@ -4,8 +4,16 @@
     <dimen name="layout_margin">16dp</dimen>
 
 
+    <dimen name="margin_small">10dp</dimen>
     <dimen name="margin_normal">20dp</dimen>
+    <dimen name="margin_large">100dp</dimen>
+    <dimen name="margin_xl">150dp</dimen>
 
-    <dimen name="padding_normal">10dp</dimen>
+    <dimen name="padding_small">10dp</dimen>
+    <dimen name="padding_normal">20dp</dimen>
+
+
+    <dimen name="textsize_title">24sp</dimen>
+    <dimen name="textsize_subtitle">20sp</dimen>
 
 </resources>

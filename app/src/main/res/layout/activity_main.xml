@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:layout_margin="@dimen/layout_margin"
     tools:context="com.example.android.flashcards.MainActivity">
 
     <android.support.constraint.ConstraintLayout
@@ -14,8 +15,7 @@
 
         <TextView
             android:id="@+id/tv_title"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            style="@style/TitleStyle"
             android:text="@string/theme_title"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
@@ -23,8 +23,7 @@
 
         <TextView
             android:id="@+id/tv_subtitle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            style="@style/SubtitleStyle"
             android:text="@string/theme_subtitle"
             app:layout_constraintTop_toBottomOf="@id/tv_title"
             app:layout_constraintLeft_toLeftOf="parent"
@@ -32,21 +31,20 @@
 
         <Button
             android:id="@+id/b_practice"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            style="@style/ButtonStyle"
             android:text="@string/practice_button"
             android:onClick="onClickPractice"
             app:layout_constraintTop_toBottomOf="@id/tv_subtitle"
             app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent" />
+            app:layout_constraintRight_toLeftOf="@+id/b_take_exam" />
 
         <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:id="@id/b_take_exam"
+            style="@style/ButtonStyle"
             android:text="@string/exam_button"
             android:onClick="onClickTakeExam"
-            app:layout_constraintTop_toBottomOf="@id/b_practice"
-            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_subtitle"
+            app:layout_constraintLeft_toRightOf="@id/b_practice"
             app:layout_constraintRight_toRightOf="parent" />
 
     </android.support.constraint.ConstraintLayout>
