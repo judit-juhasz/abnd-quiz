@@ -10,7 +10,6 @@ import android.widget.Toast;
 
 public class ExamActivity extends AppCompatActivity {
 
-    private int mScore = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,38 +19,40 @@ public class ExamActivity extends AppCompatActivity {
 
     public void submitAnswer(View view) {
 
+        int score = 0;
+
         //1. question
         EditText answerForQuestion1 = (EditText) findViewById(R.id.et_answer_1);
         if (answerForQuestion1.getText().toString().equals(getString(R.string.answer_1))) {
-            mScore++;
+            score++;
         }
 
         // 2. question
         RadioButton correctAnswerForQuestion2 = (RadioButton) findViewById(R.id.rb_answer_2_b);
 
         if (correctAnswerForQuestion2.isChecked()) {
-            mScore++;
+            score++;
         }
 
         // 3. question
         RadioButton correctAnswerForQuestion3 = (RadioButton) findViewById(R.id.rb_answer_3_c);
 
         if (correctAnswerForQuestion3.isChecked()) {
-            mScore++;
+            score++;
         }
 
         // 4. question
         RadioButton correctAnswerForQuestion4 = (RadioButton) findViewById(R.id.rb_answer_4_b);
 
         if (correctAnswerForQuestion4.isChecked()) {
-            mScore++;
+            score++;
         }
 
         // 5. question
         RadioButton correctAnswerForQuestion5 = (RadioButton) findViewById(R.id.rb_answer_5_c);
 
         if (correctAnswerForQuestion5.isChecked()) {
-            mScore++;
+            score++;
         }
 
         // 6. question
@@ -66,21 +67,21 @@ public class ExamActivity extends AppCompatActivity {
                 !answerForQuestion6c.isChecked() &&
                 !answerForQuestion6d.isChecked() &&
                 answerForQuestion6e.isChecked()) {
-            mScore++;
+            score++;
         }
 
         // 7. question
         RadioButton correctAnswerForQuestion7 = (RadioButton) findViewById(R.id.rb_answer_7_c);
 
         if (correctAnswerForQuestion7.isChecked()) {
-            mScore++;
+            score++;
         }
 
         // 8. question
         RadioButton correctAnswerForQuestion8 = (RadioButton) findViewById(R.id.rb_answer_8_c);
 
         if (correctAnswerForQuestion8.isChecked()) {
-            mScore++;
+            score++;
         }
 
         // 9. question
@@ -93,19 +94,19 @@ public class ExamActivity extends AppCompatActivity {
                 !answerForQuestion9b.isChecked() &&
                 !answerForQuestion9c.isChecked() &&
                 answerForQuestion9d.isChecked()) {
-            mScore++;
+            score++;
         }
 
         // 10. question
         RadioButton correctAnswerForQuestion10 = (RadioButton) findViewById(R.id.rb_answer_10_c);
 
         if (correctAnswerForQuestion10.isChecked()) {
-            mScore++;
+            score++;
         }
 
-        String result = "Good, but you need more practice to pass. Your score is " + mScore + ".";
-        if (mScore >= 5) {
-            result = "Congratulations! You passed this exam. Your score is " + mScore + ".";
+        String result = "Good, but you need more practice to pass. Your score is " + score + ".";
+        if (score >= 5) {
+            result = "Congratulations! You passed this exam. Your score is " + score + ".";
         }
         Toast.makeText(this, result, Toast.LENGTH_LONG).show();
     }
