@@ -1,24 +1,39 @@
-<resources>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="app_name">Flashcards</string>
 
-    <string name="theme_title">Test Your Knowledge</string>
+    <string name="theme_title">Know Your Empire</string>
     <string name="theme_subtitle">The Roman Empire</string>
     <string name="practice_button">Practice</string>
     <string name="exam_button">Take exam</string>
+
     <string name="user_name">Name</string>
-    <string name="typing_name">Please type your name</string>
+    <string name="typing_name">Please enter your name</string>
     <string name="category_title">Categories</string>
     <string name="shuffle_cards">Shuffle cards</string>
     <string name="yes_button">Yes</string>
     <string name="no_button">No</string>
     <string name="start_button">Start</string>
+    <string name="message_missing_name_categories">Please type your name and select one or more
+        categories.</string>
+    <string name="message_missing_name">Please type your name.</string>
+    <string name="message_missing_categories">Please select one or more categories.</string>
+    <string name="message_practice_result">Your result is <xliff:g id="percentage" example="100">%d</xliff:g>%%.\n
+        The number of your correct answersis <xliff:g id="correct_answer_number" example="9">%d</xliff:g>.</string>
+    <string name="congratulation_text">Well done!</string>
+    <string name="congratulation_text_name">Well done,
+        <xliff:g id="name" example="Judit">%s</xliff:g>!</string>
+    <string name="exam_fail">You need more practice to pass.
+        Your score is <xliff:g id="score" example="5">%d</xliff:g>.</string>
+    <string name="exam_pass">Congratulations! You passed this exam. Your score is
+        <xliff:g id="score" example="5">%d</xliff:g>.</string>
+
+
     <string name="show_answer_button">Show answer</string>
     <string name="check_answer_text">Did you know the answer?</string>
     <string name="question">Here is the question</string>
     <string name="answer">Here is the answer</string>
     <string name="new_quiz">New Quiz</string>
     <string name="exam">Exam</string>
-
 
     <!-- Categories -->
     <string name="category_a">Events</string>

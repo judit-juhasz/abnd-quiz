@@ -1,19 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <!-- Margins of Layout -->
     <dimen name="layout_margin">16dp</dimen>
+    <dimen name="layout_margin_large">50dp</dimen>
 
-
+    <!-- Margins (Textview, View etc.) -->
     <dimen name="margin_small">10dp</dimen>
     <dimen name="margin_normal">20dp</dimen>
-    <dimen name="margin_large">100dp</dimen>
-    <dimen name="margin_xl">150dp</dimen>
+    <dimen name="margin_large">30dp</dimen>
+    <dimen name="margin_xl">100dp</dimen>
+    <dimen name="margin_xxl">150dp</dimen>
 
+    <dimen name="margin_between_checkboxes">25dp</dimen>
+
+    <!-- Padding (Button etc.) -->
     <dimen name="padding_small">10dp</dimen>
     <dimen name="padding_normal">20dp</dimen>
+    <dimen name="padding_large">30dp</dimen>
 
-
+    <!-- TextSizes -->
     <dimen name="textsize_title">24sp</dimen>
     <dimen name="textsize_subtitle">20sp</dimen>
+    <dimen name="textsize_config_title">16sp</dimen>
+    <dimen name="textsize_edittext">16sp</dimen>
+    <dimen name="textsize_quiz_question">16sp</dimen>
+    <dimen name="result_title">24sp</dimen>
+    <dimen name="textsize_result">16sp</dimen>
+
+    <!-- View params -->
+    <dimen name="height_separator_line">1dp</dimen>
+
 
 </resources>

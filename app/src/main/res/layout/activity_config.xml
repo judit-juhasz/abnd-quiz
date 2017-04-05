@@ -3,130 +3,102 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    style="@style/ScrollViewStyle"
     tools:context="com.example.android.flashcards.ConfigActivity">
 
     <android.support.constraint.ConstraintLayout
         xmlns:app="http://schemas.android.com/apk/res-auto"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:padding="16dp">
+        style="@style/LayoutStyle">
 
         <TextView
             android:id="@+id/tv_name_label"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            style="@style/NameTitle"
             android:text="@string/user_name"
-            android:textStyle="bold"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <EditText
             android:id="@+id/et_name"
-            android:layout_width="336dp"
-            android:layout_height="wrap_content"
+            style="@style/NameEditText"
             android:hint="@string/typing_name"
-            android:maxLines="1"
-            android:layout_marginTop="16dp"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tv_name_label" />
 
         <TextView
             android:id="@+id/tv_categories_label"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            style="@style/CategoriesTitle"
             android:text="@string/category_title"
-            android:textStyle="bold"
-            android:layout_marginTop="16dp"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toBottomOf="@id/et_name" />
 
         <CheckBox
             android:id="@+id/cb_category_events"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            style="@style/CategoryCheckBoxLeft"
             android:text="@string/category_a"
-            android:layout_marginTop="16dp"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tv_categories_label" />
 
         <CheckBox
             android:id="@+id/cb_category_persons"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            style="@style/CategoryCheckBoxRight"
             android:text="@string/category_b"
             app:layout_constraintTop_toTopOf="@id/cb_category_events"
             app:layout_constraintLeft_toRightOf="@id/cb_category_events"
-            android:layout_marginLeft="25dp"
-            android:layout_marginStart="25dp" />
+            android:layout_marginLeft="@dimen/margin_between_checkboxes"
+            android:layout_marginStart="@dimen/margin_between_checkboxes" />
 
         <CheckBox
             android:id="@+id/cb_category_definitions"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            style="@style/CategoryCheckBoxLeft"
             android:text="@string/category_c"
-            android:layout_marginTop="16dp"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toBottomOf="@id/cb_category_events" />
 
         <CheckBox
             android:id="@+id/cb_category_topography"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            style="@style/CategoryCheckBoxRight"
             android:text="@string/category_d"
             app:layout_constraintTop_toTopOf="@id/cb_category_definitions"
             app:layout_constraintLeft_toLeftOf="@id/cb_category_persons" />
 
         <CheckBox
             android:id="@+id/cb_category_battles"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            style="@style/CategoryCheckBoxLeft"
             android:text="@string/category_e"
-            android:layout_marginTop="16dp"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toBottomOf="@id/cb_category_definitions" />
 
         <CheckBox
             android:id="@+id/cb_category_culture"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            style="@style/CategoryCheckBoxRight"
             android:text="@string/category_f"
             app:layout_constraintTop_toTopOf="@id/cb_category_battles"
             app:layout_constraintLeft_toLeftOf="@id/cb_category_topography" />
 
         <TextView
             android:id="@+id/tv_shuffle_cards_label"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            style="@style/ShuffleCardsTitle"
             android:text="@string/shuffle_cards"
-            android:textStyle="bold"
-            android:layout_marginTop="16dp"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toBottomOf="@id/cb_category_battles" />
 
         <RadioGroup
             android:id="@+id/rg_shuffle_cards"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
+            style="@style/RadioGroupShuffleCards"
             android:checkedButton="@+id/rb_shuffle_false"
-            android:layout_marginTop="16dp"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tv_shuffle_cards_label" >
 
             <RadioButton
                 android:id="@+id/rb_shuffle_true"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/RadioButtonShuffleCards"
                 android:text="@string/yes_button"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/rg_shuffle_cards" />
 
             <RadioButton
                 android:id="@id/rb_shuffle_false"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/RadioButtonShuffleCards"
                 android:text="@string/no_button"
                 app:layout_constraintLeft_toLeftOf="@id/rb_shuffle_true"
                 app:layout_constraintTop_toBottomOf="@id/rg_shuffle_cards" />
@@ -135,10 +107,8 @@
 
         <Button
             android:id="@+id/b_start_quiz"
+            style="@style/StartQuizButton"
             android:text="@string/start_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
             android:onClick="onClickStartQuiz"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toBottomOf="@id/rg_shuffle_cards"/>

@@ -5,6 +5,7 @@
     <color name="colorAccent">#03A9F4</color>
 
     <color name="colorLightBackground">#ECEFF1</color>
+    <color name="colorSeparatorLineBackground">#000000</color>
 
     <color name="colorPrimaryText">#E6000000</color>
 </resources>
