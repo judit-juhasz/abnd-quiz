@@ -25,9 +25,9 @@ public class ResultActivity extends AppCompatActivity {
         final TextView congratulationsTextView = (TextView) findViewById(R.id.tv_congratulations);
         if (intent.hasExtra(EXTRA_NAME)) {
             mName = intent.getStringExtra(EXTRA_NAME);
-            congratulationsTextView.setText("Congratulations, " + mName + "!");
+            congratulationsTextView.setText(getString(R.string.congratulation_text_name, mName));
         } else {
-            congratulationsTextView.setText("Congratulations!");
+            congratulationsTextView.setText(getString(R.string.congratulation_text));
         }
 
         final int numberOfQuestions = intent.getIntExtra(EXTRA_NUMBER_OF_QUESTIONS, 1);
@@ -35,7 +35,7 @@ public class ResultActivity extends AppCompatActivity {
                 intent.getIntExtra(EXTRA_NUMBER_OF_CORRECT_ANSWERS, numberOfQuestions);
         final int resultPercentage = (int) ((numberOfCorrectAnswers * 100.0) / numberOfQuestions);
         final TextView resultTextView = (TextView) findViewById(R.id.tv_result);
-        resultTextView.setText("Your result is " + resultPercentage + "% which is not that bad!");
+        resultTextView.setText(getString(R.string.message_practice_result, resultPercentage, numberOfCorrectAnswers));
     }
 
     public void onClickNewQuiz(View view) {

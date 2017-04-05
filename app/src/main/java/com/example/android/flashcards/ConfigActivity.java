@@ -104,14 +104,14 @@ public class ConfigActivity extends AppCompatActivity {
         final boolean isCategorySelectionCorrect = isOneOrMoreCategorySelected();
 
         if (!isNameCorrect && !isCategorySelectionCorrect) {
-            Toast.makeText(this, "Please type your name and select at least one category.",
+            Toast.makeText(this, getString(R.string.message_missing_name_categories),
                     Toast.LENGTH_LONG).show();
             return true;
         } else if (!isNameCorrect) {
-            Toast.makeText(this, "Please type your name.", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, getString(R.string.message_missing_name), Toast.LENGTH_LONG).show();
             return true;
         } else if (!isCategorySelectionCorrect) {
-            Toast.makeText(this, "Please select at least one category.", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, getString(R.string.message_missing_categories), Toast.LENGTH_LONG).show();
             return true;
         }
 
