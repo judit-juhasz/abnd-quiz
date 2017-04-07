@@ -1,8 +1,11 @@
 package com.example.android.flashcards;
 
 import android.content.Intent;
+import android.support.design.widget.TextInputLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.EditText;
@@ -32,6 +35,8 @@ public class ConfigActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_config);
 
+        setupFloatingLabelError();
+
         final Intent intent = getIntent();
         mNameEditText = (EditText) findViewById(R.id.et_name);
         if (intent.hasExtra(EXTRA_NAME)) {
@@ -46,6 +51,33 @@ public class ConfigActivity extends AppCompatActivity {
         mCategoryCultureCheckBox = (CheckBox) findViewById(R.id.cb_category_culture);
 
         mShuffleRadioButton = (RadioButton) findViewById(R.id.rb_shuffle_true);
+    }
+
+    private void setupFloatingLabelError() {
+        final TextInputLayout floatingUsernameLabel =
+                (TextInputLayout) findViewById(R.id.username_text_input_layout);
+
+        floatingUsernameLabel.setError(getString(R.string.name_error));
+        floatingUsernameLabel.setErrorEnabled(true);
+
+        floatingUsernameLabel.getEditText().addTextChangedListener(new TextWatcher() {
+            @Override
+            public void onTextChanged(CharSequence text, int start, int count, int after) {
+                if (text.length() == 0) {
+                    floatingUsernameLabel.setError(getString(R.string.name_error));
+                    floatingUsernameLabel.setErrorEnabled(true);
+                } else {
+                    floatingUsernameLabel.setErrorEnabled(false);
+                }
+            }
+            @Override
+            public void beforeTextChanged(CharSequence text, int start, int count, int after) {
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+            }
+        });
     }
 
     public void onClickStartQuiz(View view) {
