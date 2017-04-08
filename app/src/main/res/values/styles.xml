@@ -16,11 +16,18 @@
         <item name="android:layout_margin">@dimen/layout_margin</item>
     </style>
 
+    <!-- Layout (Linear stb.) style-->
+
     <style name="LayoutStyle">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
     </style>
 
+    <style name="VerticalLinearLayout">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">vertical</item>
+    </style>
 
     <!-- Activity_main.xml styles -->
 
@@ -99,7 +106,8 @@
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:textColor">@color/colorPrimaryText</item>
-        <item name="android:layout_marginBottom">@dimen/margin_normal</item>
+        <item name="android:layout_marginBottom">@dimen/margin_small</item>
+        <item name="android:layout_marginTop">@dimen/margin_small</item>
         <item name="android:padding">@dimen/padding_small</item>
         <item name="android:background">@color/colorLightBackground</item>
     </style>
@@ -108,7 +116,6 @@
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:textColor">@color/colorPrimaryText</item>
-        <item name="android:layout_marginTop">@dimen/margin_normal</item>
     </style>
 
     <style name="AnswerEditText" parent="Theme.AppCompat.Light">
@@ -129,6 +136,11 @@
         <item name="android:layout_marginBottom">@dimen/margin_large</item>
     </style>
 
+    <style name="QuestionCardView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">@dimen/margin_normal</item>
+    </style>
 
     <!-- Activity_result.xml styles -->
 
@@ -155,13 +167,20 @@
         <item name="android:paddingRight">@dimen/padding_normal</item>
     </style>
 
-
     <!-- Activity_config.xml styles -->
+
+    <style name="NameTitle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/textsize_config_title</item>
+        <item name="android:textStyle">bold</item>
+    </style>
 
     <style name="NameEditText" parent="Theme.AppCompat.Light">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:maxLines">1</item>
+        <item name="android:textSize">@dimen/textsize_edittext</item>
     </style>
 
     <style name="CategoriesTitle">
