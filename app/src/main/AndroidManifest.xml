@@ -10,14 +10,36 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".ConfigActivity"
-            android:label="@string/practice_button"/>
+            android:label="@string/practice_button"
+            android:parentActivityName=".MainActivity"
+            android:launchMode="singleTop">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
         <activity android:name=".QuizActivity"
-            android:label="@string/practice_button"/>
+            android:label="@string/practice_button"
+            android:parentActivityName=".ConfigActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ConfigActivity" />
+        </activity>
         <activity android:name=".ResultActivity"
-            android:label="@string/practice_button"/>
+            android:label="@string/practice_button"
+            android:parentActivityName=".ConfigActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ConfigActivity" />
+        </activity>
         <activity android:name=".ExamActivity"
-            android:label="@string/exam"/>
-        <activity android:name=".MainActivity">
+            android:label="@string/exam"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+        <activity android:name=".MainActivity"
+            android:launchMode="singleTop">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
