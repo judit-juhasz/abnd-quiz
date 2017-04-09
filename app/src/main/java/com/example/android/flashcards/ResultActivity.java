@@ -35,7 +35,8 @@ public class ResultActivity extends AppCompatActivity {
                 intent.getIntExtra(EXTRA_NUMBER_OF_CORRECT_ANSWERS, numberOfQuestions);
         final int resultPercentage = (int) ((numberOfCorrectAnswers * 100.0) / numberOfQuestions);
         final TextView resultTextView = (TextView) findViewById(R.id.tv_result);
-        resultTextView.setText(getString(R.string.message_practice_result, resultPercentage, numberOfCorrectAnswers));
+        resultTextView.setText(getString(R.string.message_practice_result, resultPercentage,
+                numberOfCorrectAnswers, numberOfQuestions));
     }
 
     public void onClickNewQuiz(View view) {

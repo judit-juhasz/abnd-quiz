@@ -17,8 +17,11 @@
     <string name="name_error">You must enter a name.</string>
     <string name="message_missing_name">Please type your name.</string>
     <string name="message_missing_categories">Please select one or more categories.</string>
-    <string name="message_practice_result">Your result is <xliff:g id="percentage" example="100">%d</xliff:g>%%.
-        The number of your correct answers is <xliff:g id="correct_answer_number" example="9">%d</xliff:g>.</string>
+    <string name="message_practice_result">Your result is
+        <xliff:g id="percentage" example="100">%d</xliff:g>%%.
+        The number of your correct answers is
+        <xliff:g id="correct_answer_number" example="9">%d</xliff:g> out of
+        <xliff:g id="number_of_questions" example="9">%d</xliff:g>.</string>
     <string name="congratulation_text">Well done!</string>
     <string name="congratulation_text_name">Well done,
         <xliff:g id="name" example="Judit">%s</xliff:g>!</string>
