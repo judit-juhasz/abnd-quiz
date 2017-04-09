@@ -6,7 +6,7 @@
     <string name="practice_button">Practice</string>
     <string name="exam_button">Take exam</string>
 
-    <string name="username">Username</string>
+    <string name="username">Name</string>
     <string name="category_title">Categories</string>
     <string name="shuffle_cards">Shuffle cards</string>
     <string name="yes_button">Yes</string>
@@ -14,7 +14,7 @@
     <string name="start_button">Start</string>
     <string name="message_missing_name_categories">Please type your name and select one or more
         categories.</string>
-    <string name="name_error">You must enter a username!</string>
+    <string name="name_error">You must enter a name.</string>
     <string name="message_missing_name">Please type your name.</string>
     <string name="message_missing_categories">Please select one or more categories.</string>
     <string name="message_practice_result">Your result is <xliff:g id="percentage" example="100">%d</xliff:g>%%.
