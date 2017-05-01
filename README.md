@@ -1,6 +1,6 @@
 # Flashcards
 
-My Quiz App for my Udacity/Google Scholarship for Android Development for Beginners. **The app is for education purposes only.**
+The Quiz App (Project 3) for Udacity's Android Basics Nanodegree by Google. **The app is for education purposes only.**
 
 ## Demo
 
