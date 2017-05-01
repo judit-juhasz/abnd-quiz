@@ -5,8 +5,7 @@
     style="@style/ScrollViewStyle"
     tools:context="com.example.android.flashcards.ExamActivity">
 
-    <LinearLayout
-        style="@style/VerticalLinearLayout">
+    <LinearLayout style="@style/VerticalLinearLayout">
 
         <TextView
             style="@style/ExamInformation"
@@ -20,8 +19,7 @@
             card_view:cardUseCompatPadding="true"
             card_view:contentPadding="@dimen/padding_small">
 
-            <LinearLayout
-                style="@style/VerticalLinearLayout">
+            <LinearLayout style="@style/VerticalLinearLayout">
 
                 <TextView
                     style="@style/ExamQuestion"
@@ -45,8 +43,7 @@
             card_view:cardUseCompatPadding="true"
             card_view:contentPadding="@dimen/padding_small">
 
-            <LinearLayout
-                style="@style/VerticalLinearLayout">
+            <LinearLayout style="@style/VerticalLinearLayout">
 
                 <TextView
                     android:id="@+id/tv_question_2"
@@ -61,19 +58,19 @@
                         android:id="@+id/rb_answer_2_a"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/answer_2_a"/>
+                        android:text="@string/answer_2_a" />
 
                     <RadioButton
                         android:id="@+id/rb_answer_2_b"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/answer_2_b"/>
+                        android:text="@string/answer_2_b" />
 
                     <RadioButton
                         android:id="@+id/rb_answer_2_c"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/answer_2_c"/>
+                        android:text="@string/answer_2_c" />
 
                 </RadioGroup>
 
@@ -89,8 +86,7 @@
             card_view:cardUseCompatPadding="true"
             card_view:contentPadding="@dimen/padding_small">
 
-            <LinearLayout
-                style="@style/VerticalLinearLayout">
+            <LinearLayout style="@style/VerticalLinearLayout">
 
                 <TextView
                     android:id="@+id/tv_question_3"
@@ -105,19 +101,19 @@
                         android:id="@+id/rb_answer_3_a"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/answer_3_a"/>
+                        android:text="@string/answer_3_a" />
 
                     <RadioButton
                         android:id="@+id/rb_answer_3_b"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/answer_3_b"/>
+                        android:text="@string/answer_3_b" />
 
                     <RadioButton
                         android:id="@+id/rb_answer_3_c"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/answer_3_c"/>
+                        android:text="@string/answer_3_c" />
 
                 </RadioGroup>
 
@@ -133,8 +129,7 @@
             card_view:cardUseCompatPadding="true"
             card_view:contentPadding="@dimen/padding_small">
 
-            <LinearLayout
-                style="@style/VerticalLinearLayout">
+            <LinearLayout style="@style/VerticalLinearLayout">
 
                 <TextView
                     android:id="@+id/tv_question_4"
@@ -149,19 +144,19 @@
                         android:id="@+id/rb_answer_4_a"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/answer_4_a"/>
+                        android:text="@string/answer_4_a" />
 
                     <RadioButton
                         android:id="@+id/rb_answer_4_b"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/answer_4_b"/>
+                        android:text="@string/answer_4_b" />
 
                     <RadioButton
                         android:id="@+id/rb_answer_4_c"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/answer_4_c"/>
+                        android:text="@string/answer_4_c" />
 
                 </RadioGroup>
 
@@ -177,8 +172,7 @@
             card_view:cardUseCompatPadding="true"
             card_view:contentPadding="@dimen/padding_small">
 
-            <LinearLayout
-                style="@style/VerticalLinearLayout">
+            <LinearLayout style="@style/VerticalLinearLayout">
 
                 <TextView
                     android:id="@+id/tv_question_5"
@@ -193,19 +187,19 @@
                         android:id="@+id/rb_answer_5_a"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/answer_5_a"/>
+                        android:text="@string/answer_5_a" />
 
                     <RadioButton
                         android:id="@+id/rb_answer_5_b"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/answer_5_b"/>
+                        android:text="@string/answer_5_b" />
 
                     <RadioButton
                         android:id="@+id/rb_answer_5_c"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/answer_5_c"/>
+                        android:text="@string/answer_5_c" />
 
                 </RadioGroup>
 
@@ -221,8 +215,7 @@
             card_view:cardUseCompatPadding="true"
             card_view:contentPadding="@dimen/padding_small">
 
-            <LinearLayout
-                style="@style/VerticalLinearLayout">
+            <LinearLayout style="@style/VerticalLinearLayout">
 
                 <TextView
                     android:id="@+id/tv_question_6"
@@ -233,31 +226,31 @@
                     android:id="@+id/cb_answer_6_a"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/answer_6_a"/>
+                    android:text="@string/answer_6_a" />
 
                 <CheckBox
                     android:id="@+id/cb_answer_6_b"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/answer_6_b"/>
+                    android:text="@string/answer_6_b" />
 
                 <CheckBox
                     android:id="@+id/cb_answer_6_c"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/answer_6_c"/>
+                    android:text="@string/answer_6_c" />
 
                 <CheckBox
                     android:id="@+id/cb_answer_6_d"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/answer_6_d"/>
+                    android:text="@string/answer_6_d" />
 
                 <CheckBox
                     android:id="@+id/cb_answer_6_e"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/answer_6_e"/>
+                    android:text="@string/answer_6_e" />
 
             </LinearLayout>
 
@@ -271,14 +264,13 @@
             card_view:cardUseCompatPadding="true"
             card_view:contentPadding="@dimen/padding_small">
 
-            <LinearLayout
-                style="@style/VerticalLinearLayout">
+            <LinearLayout style="@style/VerticalLinearLayout">
 
                 <TextView
                     android:id="@+id/tv_question_7"
                     style="@style/ExamQuestion"
-                    android:text="@string/question_7"
-                    android:layout_marginTop="@dimen/margin_normal"/>
+                    android:layout_marginTop="@dimen/margin_normal"
+                    android:text="@string/question_7" />
 
                 <RadioGroup
                     android:layout_width="wrap_content"
@@ -288,19 +280,19 @@
                         android:id="@+id/rb_answer_7_a"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/answer_7_a"/>
+                        android:text="@string/answer_7_a" />
 
                     <RadioButton
                         android:id="@+id/rb_answer_7_b"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/answer_7_b"/>
+                        android:text="@string/answer_7_b" />
 
                     <RadioButton
                         android:id="@+id/rb_answer_7_c"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/answer_7_c"/>
+                        android:text="@string/answer_7_c" />
 
                 </RadioGroup>
 
@@ -316,8 +308,7 @@
             card_view:cardUseCompatPadding="true"
             card_view:contentPadding="@dimen/padding_small">
 
-            <LinearLayout
-                style="@style/VerticalLinearLayout">
+            <LinearLayout style="@style/VerticalLinearLayout">
 
                 <TextView
                     android:id="@+id/tv_question_8"
@@ -332,19 +323,19 @@
                         android:id="@+id/rb_answer_8_a"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/answer_8_a"/>
+                        android:text="@string/answer_8_a" />
 
                     <RadioButton
                         android:id="@+id/rb_answer_8_b"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/answer_8_b"/>
+                        android:text="@string/answer_8_b" />
 
                     <RadioButton
                         android:id="@+id/rb_answer_8_c"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/answer_8_c"/>
+                        android:text="@string/answer_8_c" />
 
                 </RadioGroup>
 
@@ -360,8 +351,7 @@
             card_view:cardUseCompatPadding="true"
             card_view:contentPadding="@dimen/padding_small">
 
-            <LinearLayout
-                style="@style/VerticalLinearLayout">
+            <LinearLayout style="@style/VerticalLinearLayout">
 
                 <TextView
                     android:id="@+id/tv_question_9"
@@ -372,25 +362,25 @@
                     android:id="@+id/cb_answer_9_a"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/answer_9_a"/>
+                    android:text="@string/answer_9_a" />
 
                 <CheckBox
                     android:id="@+id/cb_answer_9_b"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/answer_9_b"/>
+                    android:text="@string/answer_9_b" />
 
                 <CheckBox
                     android:id="@+id/cb_answer_9_c"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/answer_9_c"/>
+                    android:text="@string/answer_9_c" />
 
                 <CheckBox
                     android:id="@+id/cb_answer_9_d"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/answer_9_d"/>
+                    android:text="@string/answer_9_d" />
 
             </LinearLayout>
 
@@ -404,8 +394,7 @@
             card_view:cardUseCompatPadding="true"
             card_view:contentPadding="@dimen/padding_small">
 
-            <LinearLayout
-                style="@style/VerticalLinearLayout">
+            <LinearLayout style="@style/VerticalLinearLayout">
 
                 <TextView
                     android:id="@+id/tv_question_10"
@@ -420,19 +409,19 @@
                         android:id="@+id/rb_answer_10_a"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/answer_10_a"/>
+                        android:text="@string/answer_10_a" />
 
                     <RadioButton
                         android:id="@+id/rb_answer_10_b"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/answer_10_b"/>
+                        android:text="@string/answer_10_b" />
 
                     <RadioButton
                         android:id="@+id/rb_answer_10_c"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/answer_10_c"/>
+                        android:text="@string/answer_10_c" />
 
                 </RadioGroup>
 
@@ -443,8 +432,8 @@
         <Button
             android:id="@+id/b_submit_answers"
             style="@style/SubmitButton"
-            android:text="@string/submit_button"
-            android:onClick="submitAnswer" />
+            android:onClick="submitAnswer"
+            android:text="@string/submit_button" />
 
     </LinearLayout>
 

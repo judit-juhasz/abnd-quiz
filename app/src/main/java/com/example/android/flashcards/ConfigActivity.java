@@ -70,6 +70,7 @@ public class ConfigActivity extends AppCompatActivity {
                     floatingUsernameLabel.setErrorEnabled(false);
                 }
             }
+
             @Override
             public void beforeTextChanged(CharSequence text, int start, int count, int after) {
             }
@@ -152,7 +153,7 @@ public class ConfigActivity extends AppCompatActivity {
 
     public boolean isOneOrMoreCategorySelected() {
         return mCategoryEventsCheckBox.isChecked() || mCategoryPersonsCheckBox.isChecked() ||
-                mCategoryDefinitionsCheckBox.isChecked() || mCategoryTopographyCheckBox.isChecked() ||
-                mCategoryBattlesCheckBox.isChecked() || mCategoryCultureCheckBox.isChecked();
+                mCategoryDefinitionsCheckBox.isChecked() || mCategoryTopographyCheckBox.isChecked()
+                || mCategoryBattlesCheckBox.isChecked() || mCategoryCultureCheckBox.isChecked();
     }
 }

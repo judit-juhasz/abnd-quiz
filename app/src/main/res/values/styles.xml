@@ -7,7 +7,6 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
-
     <!-- ScrollView -->
 
     <style name="ScrollViewStyle">

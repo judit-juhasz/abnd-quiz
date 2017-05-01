@@ -5,44 +5,43 @@
     style="@style/ScrollViewStyle"
     tools:context="com.example.android.flashcards.MainActivity">
 
-    <android.support.constraint.ConstraintLayout
-        xmlns:app="http://schemas.android.com/apk/res-auto"
+    <android.support.constraint.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
         style="@style/LayoutStyle">
-
 
         <TextView
             android:id="@+id/tv_title"
             style="@style/TitleStyle"
             android:text="@string/theme_title"
-            app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent" />
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/tv_subtitle"
             style="@style/SubtitleStyle"
             android:text="@string/theme_subtitle"
-            app:layout_constraintTop_toBottomOf="@id/tv_title"
             app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent" />
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_title" />
 
         <Button
             android:id="@+id/b_practice"
             style="@style/ButtonStyle"
-            android:text="@string/practice_button"
             android:onClick="onClickPractice"
-            app:layout_constraintTop_toBottomOf="@id/tv_subtitle"
+            android:text="@string/practice_button"
             app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toLeftOf="@+id/b_take_exam" />
+            app:layout_constraintRight_toLeftOf="@+id/b_take_exam"
+            app:layout_constraintTop_toBottomOf="@id/tv_subtitle" />
 
         <Button
             android:id="@id/b_take_exam"
             style="@style/ButtonStyle"
-            android:text="@string/exam_button"
             android:onClick="onClickTakeExam"
-            app:layout_constraintTop_toBottomOf="@id/tv_subtitle"
+            android:text="@string/exam_button"
             app:layout_constraintLeft_toRightOf="@id/b_practice"
-            app:layout_constraintRight_toRightOf="parent" />
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_subtitle" />
 
     </android.support.constraint.ConstraintLayout>
+
 </ScrollView>

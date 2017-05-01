@@ -1,4 +1,5 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
     <string name="app_name">Flashcards</string>
 
     <string name="theme_title">Know Your Empire</string>
@@ -18,18 +19,17 @@
     <string name="message_missing_name">Please type your name.</string>
     <string name="message_missing_categories">Please select one or more categories.</string>
     <string name="message_practice_result">Your result is
-        <xliff:g id="percentage" example="100">%d</xliff:g>%%.
+        <xliff:g example="100" id="percentage">%d</xliff:g>%%.
         The number of your correct answers is
-        <xliff:g id="correct_answer_number" example="9">%d</xliff:g> out of
-        <xliff:g id="number_of_questions" example="9">%d</xliff:g>.</string>
+        <xliff:g example="9" id="correct_answer_number">%d</xliff:g> out of
+        <xliff:g example="9" id="number_of_questions">%d</xliff:g>.</string>
     <string name="congratulation_text">Well done!</string>
     <string name="congratulation_text_name">Well done,
-        <xliff:g id="name" example="Judit">%s</xliff:g>!</string>
+        <xliff:g example="Judit" id="name">%s</xliff:g>!</string>
     <string name="exam_fail">You need more practice to pass.
-        Your score is <xliff:g id="score" example="5">%d</xliff:g>.</string>
+        Your score is <xliff:g example="5" id="score">%d</xliff:g>.</string>
     <string name="exam_pass">Congratulations! You passed this exam. Your score is
-        <xliff:g id="score" example="5">%d</xliff:g>.</string>
-
+        <xliff:g example="5" id="score">%d</xliff:g>.</string>
 
     <string name="show_answer_button">Show answer</string>
     <string name="check_answer_text">Did you know the answer?</string>
@@ -45,7 +45,6 @@
     <string name="category_d">Topography</string>
     <string name="category_e">Battles</string>
     <string name="category_f">Culture</string>
-
 
     <!-- Practice questions and answers -->
     <string name="question_events_1">44 BCE</string>
@@ -155,12 +154,10 @@
     <string name="answer_3_b">Julius Caesar</string>
     <string name="answer_3_c">Tarquinius Superbus</string>
 
-
     <string name="question_4">In what year did the Western Roman Empire come to an end?</string>
     <string name="answer_4_a">395 CE</string>
     <string name="answer_4_b">476 CE</string>
     <string name="answer_4_c">27 BCE</string>
-
 
     <string name="question_5">Where did Julius Caesar defeat Pompey?</string>
     <string name="answer_5_a">Zama</string>
@@ -196,4 +193,5 @@
     <string name="answer_10_c">Romulus</string>
 
     <string name="submit_button">Submit</string>
+
 </resources>

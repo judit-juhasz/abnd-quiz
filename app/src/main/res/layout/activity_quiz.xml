@@ -6,8 +6,7 @@
     style="@style/ScrollViewStyle"
     tools:context="com.example.android.flashcards.QuizActivity">
 
-    <android.support.constraint.ConstraintLayout
-        xmlns:app="http://schemas.android.com/apk/res-auto"
+    <android.support.constraint.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
         style="@style/LayoutStyle">
 
         <android.support.constraint.ConstraintLayout
@@ -17,47 +16,47 @@
             <Button
                 android:id="@+id/b_show_answer"
                 style="@style/ShowAnswerButton"
+                android:onClick="onClickShowAnswer"
                 android:text="@string/show_answer_button"
-                app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
-                android:onClick="onClickShowAnswer" />
+                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:id="@+id/tv_check_question"
                 style="@style/ChechedKnowledgeQuestion"
                 android:text="@string/check_answer_text"
-                app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toRightOf="parent" />
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
             <Button
                 android:id="@+id/b_yes"
                 style="@style/CheckedButton"
+                android:onClick="onClickAnswerFeedback"
                 android:text="@string/yes_button"
-                app:layout_constraintTop_toBottomOf="@id/tv_check_question"
-                app:layout_constraintRight_toLeftOf="@+id/b_no"
                 app:layout_constraintLeft_toLeftOf="parent"
-                android:onClick="onClickAnswerFeedback" />
+                app:layout_constraintRight_toLeftOf="@+id/b_no"
+                app:layout_constraintTop_toBottomOf="@id/tv_check_question" />
 
             <Button
                 android:id="@id/b_no"
                 style="@style/CheckedButton"
+                android:onClick="onClickAnswerFeedback"
                 android:text="@string/no_button"
-                app:layout_constraintTop_toBottomOf="@id/tv_check_question"
                 app:layout_constraintLeft_toRightOf="@id/b_yes"
                 app:layout_constraintRight_toRightOf="parent"
-                android:onClick="onClickAnswerFeedback" />
+                app:layout_constraintTop_toBottomOf="@id/tv_check_question" />
 
         </android.support.constraint.ConstraintLayout>
 
         <TextView
             android:id="@+id/tv_question"
             style="@style/QuestionQuiz"
-            tools:text="@string/question"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/control_panel"/>
+            app:layout_constraintTop_toBottomOf="@id/control_panel"
+            tools:text="@string/question" />
 
         <View
             android:id="@+id/v_separator_line"
@@ -67,10 +66,10 @@
         <TextView
             android:id="@+id/tv_answer"
             style="@style/AnswerQuiz"
-            tools:text="@string/answer"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/v_separator_line"/>
+            app:layout_constraintTop_toBottomOf="@id/v_separator_line"
+            tools:text="@string/answer" />
 
     </android.support.constraint.ConstraintLayout>
 
